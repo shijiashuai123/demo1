@@ -7,7 +7,12 @@
 <title>菜鸟教程</title>
 </head>
 <body>
-	<button>确定</button>
-	<script src="./util/jquery-3.3.1.min.js"></script>
+	<h2>上传文件</h2>
+	<form method="post" action="/demo1/UploadFile">
+		选择一个文件:
+	    <input type="file" name="uploadFile" />
+	    <br/><br/>
+	    <input type="submit" value="确认" />
+	</form>
 </body>
 </html>

@@ -18,7 +18,7 @@ public class DatabaseDemo extends HttpServlet {
     
 	// JDBC 驱动名及数据库 URL
     static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
-    static final String DB_URL = "jdbc:mysql://localhost:3306/test";
+    static final String DB_URL = "jdbc:mysql://127.0.0.1:3306/test";
     
     // 数据库的用户名与密码，需要根据自己的设置
     static final String USER = "root";
@@ -58,7 +58,7 @@ public class DatabaseDemo extends HttpServlet {
             // 执行 SQL 查询
             stmt = conn.createStatement(); // PreparedStatement可以写动态参数化的查询；比statement更快，可以防止SQL注入式攻击
             String sql;
-            sql = "SELECT * FROM name";
+            sql = "SELECT * FROM user";
             ResultSet rs = stmt.executeQuery(sql); 
 
             // 展开结果集数据库
