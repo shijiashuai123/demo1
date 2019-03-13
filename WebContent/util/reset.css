@@ -1,0 +1,113 @@
+/* CSS Document */
+html, body, div, span, object, iframe,h1, h2, 
+h3, h4, h5, h6, p, blockquote, pre,abbr, address, cite, code,del, dfn, 
+em, img, ins,kbd, q, samp,small, strong, sub, sup, var,b, i,dl, dt, dd, 
+ol, ul, li,fieldset, form, label, legend,table, caption, tbody, 
+tfoot,thead,tr, th, td,article, aside, canvas, details, figcaption, 
+figure, footer, header, hgroup, menu, nav, section, summary,time, mark, 
+audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    outline-style:none;/*FF*/ 
+}
+ul,ol,li{
+    list-style:none;
+}
+body,html {
+    /* background:rgba(248,248,248,1); */
+    /* width: 1920px; */
+    /* font-family: "microsoft yahei","微软雅黑",verdana,Arial,sans-serif; */
+    font-family: "MicrosoftYaHei";
+    min-width: 1920px;
+    /* height: 100%; */
+    max-width: 1366px;
+    overflow-x: hidden;
+}
+i {
+    font-style:normal;
+}
+a{
+    margin:0;
+    padding:0;
+    border:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    text-decoration:none;
+}
+a:hover,a:focus{
+    text-decoration:none;
+    /* bblr:expression(this.onFocus=this.blur());
+    outline-style:none; */
+    }
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+ 
+input, select {
+    vertical-align:middle;
+}
+
+/*css为clearfix，清除浮动*/
+.clearfix::before,
+.clearfix::after{
+    content: "";
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+.clearfix:after{clear:both;} 
+.clearfix{ 
+    *zoom:1;/*IE/7/6*/
+}
+
+/* @media screen and (max-width:1920px){
+    .main {
+        transform: scale(0.708880715,0.656);
+        transform-origin:top left;
+        left: 56.92px !important;
+    }
+    .sideNav {
+        transform: scale(0.708880715);
+        transform-origin:top left;
+    }
+    .sideNav .logo {
+        bottom: 125px !important;
+    }
+    .sideNav li {
+        font-size: 16px !important;
+    }
+    .sideNav li a {
+    }
+    body {
+        overflow-x: hidden;
+        font-size: scale(1.2)
+    }
+} 
+
+@media screen and (min-width:1440px){
+    .main {
+        transform: scale(1,0.926);
+        left: 80px !important;
+    }
+    .sideNav {
+        transform: scale(1);
+    }
+}  */
+/* @media screen and (max-width: 1024px) {
+    .main {
+        transform: scale(.533333333,0.711111111);
+        left: 42.67px !important;
+    }
+    .sideNav {
+        transform: scale(.533333333,0.711111111);
+    }
+} */

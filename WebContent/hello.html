@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+用户名：<input id="username" type="text" name="username">
+<br />
+密码：<input id="password" type="text" name="password" />
+<button id="submit">点击确定</button>
+<script src="./util/jquery-3.3.1.min.js"></script>
+<script>
+	var u = ''
+	var p = ''
+	var url = 'http://localhost:8080/demo1'
+	$("#username").bind("input propertychange",function(event){
+   	   u = $("#username").val()
+	});
+	$("#password").bind("input propertychange",function(event){
+   	   p = $("#password").val()
+	});
+	$("#submit").click(function() {
+		//console.log(u)
+		//console.log(p)
+		if (!u) {
+			alert('用户名不能为空')
+			return
+		}
+		if (!p) {
+			alert('密码不能为空') 
+			return
+		}
+		
+		$.ajax({
+			url: url + '/FormTest',
+			method: 'get',
+			data: {
+				username: u,
+				password: p
+			},
+			dataType: 'json',
+			headers: {
+				'X-token': '112233'
+			},
+			success:function(res) {
+				console.log(res)
+				if (res.ret == 0) {
+					window.location.href = './one.html'
+				} else {
+					alert(res.msg)
+				}
+			},
+			error:function(err) {
+				console.log(err)
+				alert(err.msg)
+			}
+		})
+	})
+	
+</script>
+</body>
+</html>
